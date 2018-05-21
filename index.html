@@ -157,7 +157,7 @@ var d = document.getElementById("main").innerHTML;
     var date = new Date();
     document.getElementById("user").onkeyup=function(){
     console.log("hi",i);
-    if(i==0 && document.getElementById("user").innerHTML.charAt(0)==(document.getElementById("main").innerHTML.charAt(0)))
+    if(i==0 && document.getElementById("user").value.charAt(0)==(document.getElementById("main").innerHTML.charAt(0)))
         {
           console.log("first");
         document.getElementById("user").style.color="green";  
@@ -167,7 +167,7 @@ var d = document.getElementById("main").innerHTML;
     }
       else
         {
-          if(document.getElementById("user").innerHTML.charAt(i)!=(document.getElementById("main").innerHTML.charAt(i)))
+          if(document.getElementById("user").value.charAt(i)!=(document.getElementById("main").innerHTML.charAt(i)))
           {
             document.getElementById("user").style.backgroundColor="red";
              document.getElementById("user").addEventListener('keydown',function(e){
@@ -186,7 +186,7 @@ var d = document.getElementById("main").innerHTML;
                             
                             },{once: true});   
           }
-          if(document.getElementById("user").innerHTML.charAt(i)==(document.getElementById("main").innerHTML.charAt(i)))
+          if(document.getElementById("user").value.charAt(i)==(document.getElementById("main").innerHTML.charAt(i)))
           { 
             console.log("last");
             i++;
