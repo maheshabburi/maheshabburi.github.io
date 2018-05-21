@@ -1,1 +1,217 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MY WEB PAGE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+
+.tablink {
+    background-color: #555;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#About {background-color: white;
+
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#About:hover{
+  background-color: grey;
+}
+#Typeracer {background-color: black;
+background-position: center;
+background-size: 100%;}
+* {
+    box-sizing: border-box;
+}
+
+
+.column {
+  opacity: 0.2;
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; 
+}
+.column:hover{
+  opacity: 0.8;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('About', this, 'orange')" id="defaultOpen">About</button>
+
+<button class="tablink" onclick="openPage('Typeracer', this, 'orange')">Typeracer</button>
+
+<div id="About" class="tabcontent">
+  <p style="color:orange;"><marquee><b>NOTICE:</b>Any part of this site can't be reproduced under any means according to the copyright act of 2001.</marquee></p>
+  <h3 style="font-size: 50px; text-align: left;color: magenta;"><i>ABBURI MAHESH</i></h3>
+  <p style="color: white;text-indent: 500px;font-size: 25px">Hello Everybody!!!</p>
+  <marquee direction="right" scrollamount="30"><p style="text-indent: 495px;color: white;font-size: 25px;"><i>Welcome to my page :)</i> </p></marquee>
+ <div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="color: black;opacity: 1">Part of ...</h2>
+    <p style="color: blue">Vortex</p>
+    <p style="color: blue">Nittfest</p>
+    <p style="color: blue">Festember</p>
+    <h2 style="color: black;opacity: 1">Sports</h2>
+    <p>Cricket,Football,volleyball</p>
+    <p style="color: red">Karate(participated in competitions :( ofcourse lost all of them))</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2 style="color: black;">Languages known</h2>
+    <p style="color: blue">C</p>
+    <h2 style="color: black;opacity: 1">Contact</h2>
+    <p style="color: green">You can mail me at <a>abburimahesh99@yahoo.com</a></p>
+  </div>
+</div>
+<p style="color: blue;font-size: 25px"><i>What all do you wanna know about me</i> :)</p>
+<div style="border-color:red;border-left-style: solid;padding: 15px;background-color:hsl(0, 75%, 80%);">
+  <p style="color: black">Ok ! Let me describe you a small incident that happened in my karate competition</p>
+  <p style="color: green"><i>The match is going really well, then there arised a position in which me and my opponent where at the same points, he hit me hard on my chest, that was a foul, still he got the point, which led me into tears! All my friends had to come to console and calm me down!!</i> </p>
+</div>
+<hre style="color:black"> 
+<div style="border-color:green;border-right-style: solid;padding: 15px;background-color: hsl(147, 75%, 65%);">
+  <p style="color:black;">Let me tell you my experiences during vortex.</p>
+  <p style="color: blue">We carried beds,pillows etc., and also guided people to their rooms and they called this <i><b>HOSPITALITY</b></i></p>
+</div>
+<div style="border-color:blue;border-left-style: solid;padding: 15px;background-color: hsl(240, 100%, 80%)">
+  <p style="color: black;">Being NITTFEST coordinator : A memorable job done! </p>
+  <p style="color: red;">An experience that's useful throughout life.</p>
+</div>
+<br>
+<p style="text-decoration: underline;font-size: 25px;color: green">U can check me out on</p>
+<p style="font-size: 25px">
+<i style="color:white;background-color: blue;" class="fa fa-facebook"></i> as Mahesh Abburi <br> <i class="fa fa-instagram"></i> as abburi.mahesh </p>
+</div>
+
+
+<div id="Typeracer" class="tabcontent">
+  <H1 style="text-indent: 20px">  Wanna check your speed ??</H1>
+  <p style="text-indent: 20px">Then type this out correctly,and click the done button.</p>
+  <div><p id="main" style="text-align: center;color: white;font-size: 50px">when a process switches from the running state to the waiting state pre-emptive scheduling is triggered</p>
+<textarea type="text" name="user" id="user" placeholder="Type your text here..." style="width: 100%"></textarea>
+<button id="btn1">Done</button>
+<p id="final" style="color:white;font-size: 20px"></p></div>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+   }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+document.getElementById("defaultOpen").click();
+var d = document.getElementById("main").innerHTML;
+    var start_time;
+    var end_time;
+    var i=0;
+    var date = new Date();
+    document.getElementById("user").onkeyup=function(){
+    console.log("hi",i);
+    if(i==0 && document.getElementById("user").innerHTML.charAt(0)==(document.getElementById("main").innerHTML.charAt(0)))
+        {
+          console.log("first");
+        document.getElementById("user").style.color="green";  
+        start_time= new Date().getMilliseconds();
+            
+      i++;
+    }
+      else
+        {
+          if(document.getElementById("user").innerHTML.charAt(i)!=(document.getElementById("main").innerHTML.charAt(i)))
+          {
+            document.getElementById("user").style.backgroundColor="red";
+             document.getElementById("user").addEventListener('keydown',function(e){
+
+                        var key = e.charCode||e.keyCode;
+                        if(key != 8)
+                            {
+                              e.preventDefault();
+                              console.log("inside");
+                              }
+                            else
+                             { document.getElementById("user").style.backgroundColor="white";
+                              i--;
+                              console.log("back");
+                              } 
+                            
+                            },{once: true});   
+          }
+          if(document.getElementById("user").innerHTML.charAt(i)==(document.getElementById("main").innerHTML.charAt(i)))
+          { 
+            console.log("last");
+            i++;
+                document.getElementById("user").style.color="green";
+                document.getElementById("user").style.backgroundColor="white";
+               
+          if (i==document.getElementById("main").innerHTML.length)
+        {
+          end_time = new Date().getMilliseconds() - start_time;
+             if(end_time<0)
+                end_time=1000-end_time;
+             
+            }
+            }
+   }
+    };
+
+   document.getElementById("btn1").onclick= function() {
+      document.getElementById('final').innerHTML=" Your speed is :"
++ d.length/end_time + "letters/millisecond";
+  document.getElementById('user').value=""; };
+window.onload = function(){
+  document.getElementById('user').value="";
+}
+</script>
+     
+</body>
+</html> 
