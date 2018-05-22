@@ -127,10 +127,10 @@ background-size: 100%;}
 
 <div id="Typeracer" class="tabcontent">
   <H1 style="text-indent: 20px">  Wanna check your speed ??</H1>
-  <p style="text-indent: 20px">Then type this out correctly,and click the done button.</p>
+  <p style="text-indent: 20px">Then type this out correctly!!!</p>
   <div><p id="main" style="text-align: center;color: white;font-size: 50px">when a process switches from the running state to the waiting state pre-emptive scheduling is triggered</p>
 <textarea type="text" name="user" id="user" placeholder="Type your text here..." style="width: 100%"></textarea>
-<button id="btn1">Done</button>
+<!--<button id="btn1">Done</button>-->
 <p id="final" style="color:white;font-size: 20px"></p></div>
 </div>
 
@@ -197,17 +197,17 @@ var d = document.getElementById("main").innerHTML;
         {
           end_time = new Date().getMilliseconds() - start_time;
              if(end_time<0)
-                end_time=1000-end_time;
-             
+               { end_time=1000-end_time;}
+             document.getElementById('final').innerHTML=" Your speed is :"
++ d.length/end_time + "letters/millisecond";
+  document.getElementById('user').value="";
             }
             }
    }
     };
 
-   document.getElementById("btn1").onclick= function() {
-      document.getElementById('final').innerHTML=" Your speed is :"
-+ d.length/end_time + "letters/millisecond";
-  document.getElementById('user').value=""; };
+  // document.getElementById("btn1").onclick= function() {
+    //   };
 window.onload = function(){
   document.getElementById('user').value="";
 }
